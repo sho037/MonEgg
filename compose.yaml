@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  node:
+    build:
+      context: ./frontend
+      dockerfile: ./docker/Dockerfile
+    user: node
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+    tty: true
