@@ -13,8 +13,6 @@ RUN \
         unzip \
         zlib1g-dev \
     ; \
-    DEBIAN_FRONTEND=noninteractive apt-get install postfix -y \
-    ; \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
     apt-get clean; \
     rm -rf /var/lib/apt/lists/* \
