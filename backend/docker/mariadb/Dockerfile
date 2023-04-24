@@ -1,0 +1,3 @@
+FROM mariadb:10.10.2
+
+ENV LANG=C.UTF-8

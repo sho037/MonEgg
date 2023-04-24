@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  node:
+    build:
+      context: ./frontend
+      dockerfile: ./docker/Dockerfile
+    user: node
+    working_dir: /app
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+    tty: true
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: ./backend
+      dockerfile: ./docker/php/Dockerfile
+    user: php
+    working_dir: /app
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./backend:/app
+    ports:
+      - 8000:8000
+    tty: true
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./backend
+      dockerfile: ./docker/mariadb/Dockerfile
+    environment:
+      TZ: Asia/Tokyo
+      MYSQL_DATABASE: main
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    tty: true
