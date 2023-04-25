@@ -1,0 +1,22 @@
+{
+    "postData": [
+        {
+            "nameId": 1,
+            "postId": 1,
+            "time": "2017-10-10-12:00",
+            "body": "This is a post"
+        },
+        {
+            "nameId": 3,
+            "postId": 2,
+            "time": "2017-10-10-12:00",
+            "body": "This is a post02"
+        },
+        {
+            "nameId": 1,
+            "postId": 3,
+            "time": "2017-10-10-12:00",
+            "body": "This is a post03"
+        }
+    ]
+}
