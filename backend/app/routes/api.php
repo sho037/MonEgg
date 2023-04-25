@@ -18,6 +18,10 @@ Route::post('/register', '\App\Http\Controllers\API\Auth\RegisterController@regi
 Route::post('/login', '\App\Http\Controllers\API\Auth\LoginController@login')->name('login');
 Route::post('/logout', '\App\Http\Controllers\API\Auth\LogoutController@logout')->name('logout');
 
+Route::prefix('/spot')->name('spot.')->controller(\App\Http\Controllers\API\SpotController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return new \App\Http\Resources\API\User\RegisterUserResource($request->user());
 });
