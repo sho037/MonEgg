@@ -16,26 +16,22 @@ const SignUp = () => {
                 <Typography variant="body1">ユーザー登録</Typography>
                 <Box>
                     <Typography variant="caption">ユーザーネームは表示される名前になります。</Typography>
-                    <br />
-                    <TextField id="name" fullWidth label="ユーザーネーム" variant="outlined" value={name} onChange={(e) => { setName(e.target.value) }} />
+                    <TextField id="name" sx={{mt:1}} fullWidth label="ユーザーネーム" variant="outlined" value={name} onChange={(e) => { setName(e.target.value) }} />
                 </Box>
                 <br />
                 <Box>
                     <Typography variant="caption">メールアドレスはログイン時に利用します。</Typography>
-                    <br />
-                    <TextField id="email" fullWidth label="メールアドレス" variant="outlined" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                    <TextField id="email" sx={{mt:1}} fullWidth label="メールアドレス" variant="outlined" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                 </Box>
                 <br />
                 <Box>
                     <Typography variant="caption">パスワードは8文字以上で入力してください。</Typography>
-                    <br />
-                    <TextField id="password" fullWidth type="password" label="パスワード" variant="outlined" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                    <TextField id="password" sx={{mt:1}} fullWidth type="password" label="パスワード" variant="outlined" value={password} onChange={(e) => { setPassword(e.target.value) }} />
                 </Box>
                 <br />
                 <Box>
                     <Typography variant="caption">同じパスワードを入力してください。</Typography>
-                    <br />
-                    <TextField id="confirmPassword" fullWidth type="password" label="パスワード確認" variant="outlined" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value) }} />
+                    <TextField id="confirmPassword" sx={{mt:1}} fullWidth type="password" label="パスワード確認" variant="outlined" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value) }} />
                 </Box>
                 <br />
                 <Box>
