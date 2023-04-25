@@ -9,7 +9,7 @@ const SignUp = () => {
 
     return (
         <>
-            <Box bgcolor={"skyblue"}
+            <Box bgcolor={"#e8eaf6"}
                 padding={2}>
                 <Typography variant="h5">Sign Up</Typography>
                 <hr />
