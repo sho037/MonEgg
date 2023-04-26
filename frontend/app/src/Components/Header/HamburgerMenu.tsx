@@ -29,7 +29,7 @@ export const HamburgerMenu = () => {
                     anchor="left"
                     open={open}
                     onClose={() => setOpen(false)}
-                    PaperProps={{ style: { width: '60%' } }}
+                    PaperProps={{ style: { width: 250 } }}
                 >
                     <Box sx={{ width: '500', bgcolor: 'background.paper' }}>
                         <nav aria-label="main mailbox folders">
