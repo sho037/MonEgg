@@ -2,6 +2,16 @@ import React from "react";
 import axios from "axios";
 
 const Registration = async (name: string, email: string, password: string, passwordConfirmation: string) => {
+    const Axios = axios.create({
+      baseURL: "http://localhost:8000/",
+      withCredentials: true,
+      headers: {
+        "Content-type": "Application/json",
+        Accept: "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+      },
+    });
+
     const api = axios.create({
         baseURL: "http://localhost:8000/api",
         withCredentials: true,
@@ -18,6 +28,8 @@ const Registration = async (name: string, email: string, password: string, passw
         password: password,
         password_confirmation: passwordConfirmation,
     }
+
+    await Axios.get("/sanctum/csrf-cookie");
 
     try {
         const response = await api.post("/register", userData);
