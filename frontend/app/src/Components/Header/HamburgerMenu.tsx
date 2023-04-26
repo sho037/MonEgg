@@ -20,7 +20,6 @@ export const HamburgerMenu = () => {
                     color="inherit"
                     aria-label="menu"
                     size="large"
-                    sx={{ mr: 2 }}
                     onClick={() => setOpen(true)}
                 >
                     <MenuIcon fontSize="medium" />

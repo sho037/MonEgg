@@ -24,12 +24,11 @@ export const Header = () => {
                             edge="start"
                             color="inherit"
                             aria-label="menu"
-                            sx={{ mr: 2 }}
                         >
                         <HamburgerMenu />
                         </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            logport
+                        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+                            ログポート
                         </Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
