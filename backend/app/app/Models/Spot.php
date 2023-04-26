@@ -21,4 +21,14 @@ class Spot extends Model
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * その場所で行われた投稿
+     * 
+     * 1対多の関係
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
