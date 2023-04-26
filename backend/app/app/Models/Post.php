@@ -64,6 +64,16 @@ class Post extends Model
     }
 
     /**
+     * いいねされた書き込み
+     * 
+     * 1対多の関係
+     */
+    public function postLikes()
+    {
+        return $this->hasMany(PostLike::class);
+    }
+
+    /**
      * 投稿が行われた場所
      * 
      * 多対1の関係
