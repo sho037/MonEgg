@@ -4,7 +4,9 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\Post\IndexRequest;
+use App\Http\Requests\API\Post\StoreRequest;
 use App\Services\Tables\PostService;
+use Exception;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -28,9 +30,18 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //
+        $this->postService->storePost(
+            $request->post_id,
+            $request->spot_id,
+            $request->user_id,
+            $request->content,
+        );
+        return response()->json(
+            ['message' => '正常に投稿できました'],
+            200
+        );
     }
 
     /**

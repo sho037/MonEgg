@@ -18,4 +18,17 @@ class PostRepository
                 ['post_id', null]
             ])->get();
     }
+
+    /**
+     * 投稿を保存する
+     */
+    public function storePost(int $postId = null, int $spotId, int $userId, string $content)
+    {
+        Post::create([
+            'post_id' => $postId,
+            'spot_id' => $spotId,
+            'user_id' => $userId,
+            'content' => $content
+        ]);
+    }
 }

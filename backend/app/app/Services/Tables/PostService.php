@@ -28,4 +28,12 @@ class PostService
 
         return $postWithDescendants;
     }
+
+    /**
+     * 投稿を保存する
+     */
+    public function storePost(int $postId = null, int $spotId, int $userId, string $content)
+    {
+        $this->postRepository->storePost($postId, $spotId, $userId, $content);
+    }
 }

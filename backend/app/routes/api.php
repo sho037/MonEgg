@@ -20,6 +20,10 @@ Route::post('/logout', '\App\Http\Controllers\API\Auth\LogoutController@logout')
 
 Route::prefix('/post')->name('post.')->controller(\App\Http\Controllers\API\PostController::class)->group(function () {
     Route::get('/', 'index')->name('index');
+
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/store', 'store')->name('store');
+    });
 });
 
 Route::prefix('/spot')->name('spot.')->controller(\App\Http\Controllers\API\SpotController::class)->group(function () {
