@@ -50,7 +50,7 @@ class Post extends Model
      */
     public function descendants()
     {
-        return $this->children()->with('descendants');
+        return $this->children()->with(['user', 'descendants']);
     }
 
     /**
