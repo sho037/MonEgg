@@ -23,13 +23,13 @@ export const HamburgerMenu = () => {
                     sx={{ mr: 2 }}
                     onClick={() => setOpen(true)}
                 >
-                    <MenuIcon fontSize="large" />
+                    <MenuIcon fontSize="medium" />
                 </IconButton>
                 <Drawer
-                    anchor="right"
+                    anchor="left"
                     open={open}
                     onClose={() => setOpen(false)}
-                    PaperProps={{ style: { width: '20%' } }}
+                    PaperProps={{ style: { width: '60%' } }}
                 >
                     <Box sx={{ width: '500', bgcolor: 'background.paper' }}>
                         <nav aria-label="main mailbox folders">
