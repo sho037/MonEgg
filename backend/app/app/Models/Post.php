@@ -59,7 +59,7 @@ class Post extends Model
     public function getDescendantsAttribute()
     {
         return $this->descendants()->get()->flatMap(function ($descendants) {
-            return [$descendants, $descendants->children];
+            return [$descendants];
         });
     }
 
