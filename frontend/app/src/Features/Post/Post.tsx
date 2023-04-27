@@ -2,7 +2,6 @@ import React from 'react';
 import {
     useTheme,
     useMediaQuery,
-    Typography,
     Button,
     Dialog,
     DialogTitle,
@@ -10,6 +9,7 @@ import {
     DialogActions,
 } from '@mui/material';
 import PostForm from './PostForm';
+import PostAddIcon from '@mui/icons-material/PostAdd';
 
 const Post = () => {
     const theme = useTheme();
@@ -28,8 +28,7 @@ const Post = () => {
 
     return (
         <>
-            <Typography variant="h1">Post</Typography>
-            <Button onClick={() => setOpenPostDialog(true)}>Open Dialog</Button>
+            <Button variant="contained" color="primary" onClick={() => setOpenPostDialog(true)}><PostAddIcon /></Button>
             <Dialog
                 open={openPostDialog}
                 onClose={() => setOpenPostDialog(false)}
@@ -51,10 +50,6 @@ const Post = () => {
                     <Button onClick={() => setOpenPostDialog(false)}>Close</Button>
                 </DialogActions>
             </Dialog>
-
-            <Button variant="contained" color="primary">
-                Post
-            </Button>
         </>
     );
 };
