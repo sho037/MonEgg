@@ -19,18 +19,12 @@ export const Header = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                        >
                         <HamburgerMenu />
-                        </IconButton>
+
                         <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                             ログポート
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        <Button color="inherit">SignIn</Button>
                     </Toolbar>
                 </AppBar>
             </Box>

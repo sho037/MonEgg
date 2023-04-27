@@ -8,7 +8,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import DraftsIcon from '@mui/icons-material/Drafts';
+import PlaceIcon from '@mui/icons-material/Place';
+import HomeIcon from '@mui/icons-material/Home';
+import LoginIcon from '@mui/icons-material/Login';
 
 export const HamburgerMenu = () => {
     const [open, setOpen] = useState(false);
@@ -36,35 +38,30 @@ export const HamburgerMenu = () => {
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
+                                            <HomeIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Inbox" />
+                                        <ListItemText primary="ホーム" />
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <DraftsIcon />
+                                            <LoginIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Drafts" />
+                                        <ListItemText primary="サインイン" />
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <PlaceIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="地点を設定" />
                                     </ListItemButton>
                                 </ListItem>
                             </List>
                         </nav>
                         <Divider />
-                        <nav aria-label="secondary mailbox folders">
-                            <List>
-                                <ListItem disablePadding>
-                                    <ListItemButton>
-                                        <ListItemText primary="Trash" />
-                                    </ListItemButton>
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemButton component="a" href="#simple-list">
-                                        <ListItemText primary="Spam" />
-                                    </ListItemButton>
-                                </ListItem>
-                            </List>
-                        </nav>
                     </Box>
                 </Drawer>
             </Toolbar>
