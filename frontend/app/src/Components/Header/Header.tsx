@@ -24,7 +24,7 @@ export const Header = () => {
                         <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                             Logpose
                         </Typography>
-                        <Button color="inherit">SignIn</Button>
+                        <Button color="inherit">SignUp</Button>
                     </Toolbar>
                 </AppBar>
             </Box>
