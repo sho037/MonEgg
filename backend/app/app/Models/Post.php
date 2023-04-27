@@ -50,7 +50,7 @@ class Post extends Model
      */
     public function descendants()
     {
-        return $this->children()->with('descendants');
+        return $this->children()->with(['user', 'descendants']);
     }
 
     /**
@@ -59,8 +59,18 @@ class Post extends Model
     public function getDescendantsAttribute()
     {
         return $this->descendants()->get()->flatMap(function ($descendants) {
-            return [$descendants, $descendants->children];
+            return [$descendants];
         });
+    }
+
+    /**
+     * いいねされた書き込み
+     * 
+     * 1対多の関係
+     */
+    public function postLikes()
+    {
+        return $this->hasMany(PostLike::class);
     }
 
     /**

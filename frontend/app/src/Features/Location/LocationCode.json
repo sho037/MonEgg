@@ -1,0 +1,190 @@
+[
+    {
+        "spotId": 1,
+        "spotName": "北海道"
+    },
+    {
+        "spotId": 2,
+        "spotName": "青森県"
+    },
+    {
+        "spotId": 3,
+        "spotName": "岩手県"
+    },
+    {
+        "spotId": 4,
+        "spotName": "宮城県"
+    },
+    {
+        "spotId": 5,
+        "spotName": "秋田県"
+    },
+    {
+        "spotId": 6,
+        "spotName": "山形県"
+    },
+    {
+        "spotId": 7,
+        "spotName": "福島県"
+    },
+    {
+        "spotId": 8,
+        "spotName": "茨城県"
+    },
+    {
+        "spotId": 9,
+        "spotName": "栃木県"
+    },
+    {
+        "spotId": 10,
+        "spotName": "群馬県"
+    },
+    {
+        "spotId": 11,
+        "spotName": "埼玉県"
+    },
+    {
+        "spotId": 12,
+        "spotName": "千葉県"
+    },
+    {
+        "spotId": 13,
+        "spotName": "東京都"
+    },
+    {
+        "spotId": 14,
+        "spotName": "神奈川県"
+    },
+    {
+        "spotId": 15,
+        "spotName": "新潟県"
+    },
+    {
+        "spotId": 16,
+        "spotName": "富山県"
+    },
+    {
+        "spotId": 17,
+        "spotName": "石川県"
+    },
+    {
+        "spotId": 18,
+        "spotName": "福井県"
+    },
+    {
+        "spotId": 19,
+        "spotName": "山梨県"
+    },
+    {
+        "spotId": 20,
+        "spotName": "長野県"
+    },
+    {
+        "spotId": 21,
+        "spotName": "岐阜県"
+    },
+    {
+        "spotId": 22,
+        "spotName": "静岡県"
+    },
+    {
+        "spotId": 23,
+        "spotName": "愛知県"
+    },
+    {
+        "spotId": 24,
+        "spotName": "三重県"
+    },
+    {
+        "spotId": 25,
+        "spotName": "滋賀県"
+    },
+    {
+        "spotId": 26,
+        "spotName": "京都府"
+    },
+    {
+        "spotId": 27,
+        "spotName": "大阪府"
+    },
+    {
+        "spotId": 28,
+        "spotName": "兵庫県"
+    },
+    {
+        "spotId": 29,
+        "spotName": "奈良県"
+    },
+    {
+        "spotId": 30,
+        "spotName": "和歌山県"
+    },
+    {
+        "spotId": 31,
+        "spotName": "鳥取県"
+    },
+    {
+        "spotId": 32,
+        "spotName": "島根県"
+    },
+    {
+        "spotId": 33,
+        "spotName": "岡山県"
+    },
+    {
+        "spotId": 34,
+        "spotName": "広島県"
+    },
+    {
+        "spotId": 35,
+        "spotName": "山口県"
+    },
+    {
+        "spotId": 36,
+        "spotName": "徳島県"
+    },
+    {
+        "spotId": 37,
+        "spotName": "香川県"
+    },
+    {
+        "spotId": 38,
+        "spotName": "愛媛県"
+    },
+    {
+        "spotId": 39,
+        "spotName": "高知県"
+    },
+    {
+        "spotId": 40,
+        "spotName": "福岡県"
+    },
+    {
+        "spotId": 41,
+        "spotName": "佐賀県"
+    },
+    {
+        "spotId": 42,
+        "spotName": "長崎県"
+    },
+    {
+        "spotId": 43,
+        "spotName": "熊本県"
+    },
+    {
+        "spotId": 44,
+        "spotName": "大分県"
+    },
+    {
+        "spotId": 45,
+        "spotName": "宮崎県"
+    },
+    {
+        "spotId": 46,
+        "spotName": "鹿児島県"
+    },
+    {
+        "spotId": 47,
+        "spotName": "沖縄県"
+    }
+]
