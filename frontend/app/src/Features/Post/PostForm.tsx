@@ -1,8 +1,11 @@
 import React from "react";
-import { Typography, TextField } from "@mui/material";
+import { Typography, TextField, Button } from "@mui/material";
 import Location from "../Location/Location";
+import PostToBackend from "./PostToBackend";
 
 const PostForm = () => {
+    const [postText, setPostText] = React.useState("");
+
     if (localStorage.getItem("userLocationCode") === "") {
         return (
             <>
@@ -21,7 +24,12 @@ const PostForm = () => {
                     fullWidth
                     multiline
                     rows={20}
+                    value={postText}
+                    onChange={(e) => setPostText(e.target.value)}
                 />
+                <br />
+                <br />
+                <Button variant="contained" color="primary" type="submit" onClick={() => { if (postText !== "") { PostToBackend(postText) } }}>投稿</Button>
             </>
         );
     }
