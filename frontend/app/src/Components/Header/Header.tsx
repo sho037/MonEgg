@@ -22,7 +22,7 @@ export const Header = () => {
                         <HamburgerMenu />
 
                         <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-                            ログポート
+                            Logpose
                         </Typography>
                         <Button color="inherit">SignIn</Button>
                     </Toolbar>
