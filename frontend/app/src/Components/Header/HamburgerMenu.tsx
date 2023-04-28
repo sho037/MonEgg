@@ -1,9 +1,10 @@
+import * as React from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import { Toolbar, IconButton, Drawer } from "@mui/material";
 import { useState } from "react";
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import Paper from '@mui/material/Paper';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -11,6 +12,37 @@ import Divider from '@mui/material/Divider';
 import PlaceIcon from '@mui/icons-material/Place';
 import HomeIcon from '@mui/icons-material/Home';
 import LoginIcon from '@mui/icons-material/Login';
+import {
+    Link as RouterLink,
+    LinkProps as RouterLinkProps,
+} from 'react-router-dom';
+
+
+interface ListItemLinkProps {
+    icon?: React.ReactElement;
+    primary: string;
+    to: string;
+}
+
+const Link = React.forwardRef<HTMLAnchorElement, RouterLinkProps>(function Link(
+    itemProps,
+    ref,
+) {
+    return <RouterLink ref={ref} {...itemProps} role={undefined} />;
+});
+
+function ListItemLink(props: ListItemLinkProps) {
+    const { icon, primary, to } = props;
+
+    return (
+        <li>
+            <ListItemButton component={Link} to={to}>
+                {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+                <ListItemText primary={primary} />
+            </ListItemButton>
+        </li>
+    );
+}
 
 export const HamburgerMenu = () => {
     const [open, setOpen] = useState(false);
@@ -32,37 +64,16 @@ export const HamburgerMenu = () => {
                     onClose={() => setOpen(false)}
                     PaperProps={{ style: { width: 250 } }}
                 >
-                    <Box sx={{ width: '500', bgcolor: 'background.paper' }}>
-                        <nav aria-label="main mailbox folders">
-                            <List>
-                                <ListItem disablePadding>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <HomeIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary="ホーム" />
-                                    </ListItemButton>
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <LoginIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary="サインイン" />
-                                    </ListItemButton>
-                                </ListItem>
-                                <ListItem disablePadding>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <PlaceIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary="地点を設定" />
-                                    </ListItemButton>
-                                </ListItem>
-                            </List>
-                        </nav>
-                        <Divider />
-                    </Box>
+                        <Box sx={{ width: 360 }}>
+                            <Paper elevation={0}>
+                                <List aria-label="main mailbox folders">
+                                    <ListItemLink to="../../" primary="ホーム" icon = {<HomeIcon />} />
+                                    <ListItemLink to="../../SignIn" primary="サインイン" icon={<LoginIcon />} />
+                                    <ListItemLink to="../../Location" primary="地点を設定" icon={<PlaceIcon />} />
+                                </List>
+                                <Divider />
+                            </Paper>
+                        </Box>
                 </Drawer>
             </Toolbar>
         </>
