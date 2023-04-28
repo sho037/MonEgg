@@ -8,9 +8,9 @@ import {
 import "./index.css";
 import {Header} from './Components/Header/Header'
 import App from "./App";
-import Location from "./Features/Location/Location";
 import SignIn from "./Features/SignIn/SignIn";
 import SignUp from "./Features/SignUp/SignUp";
+import NotFound from "./Components/NotFound/NotFound";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -21,9 +21,9 @@ if (rootElement) {
     <Header />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Location" element={<Location />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   </React.StrictMode>

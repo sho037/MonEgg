@@ -1,9 +1,10 @@
-
+import Location from "./Features/Location/Location";
 
 function App() {
   return (
-    <div>
-    </div>
+    <>
+      <Location />
+    </>
   );
 }
 
