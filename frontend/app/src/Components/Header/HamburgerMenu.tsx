@@ -67,9 +67,9 @@ export const HamburgerMenu = () => {
                         <Box sx={{ width: 360 }}>
                             <Paper elevation={0}>
                                 <List aria-label="main mailbox folders">
-                                    <ListItemLink to="../../" primary="ホーム" icon = {<HomeIcon />} />
-                                    <ListItemLink to="../../SignIn" primary="サインイン" icon={<LoginIcon />} />
-                                    <ListItemLink to="../../Location" primary="地点を設定" icon={<PlaceIcon />} />
+                                    <ListItemLink to="/" primary="ホーム" icon = {<HomeIcon />} />
+                                    <ListItemLink to="/signin" primary="サインイン" icon={<LoginIcon />} />
+                                    <ListItemLink to="/location" primary="地点を設定" icon={<PlaceIcon />} />
                                 </List>
                                 <Divider />
                             </Paper>
