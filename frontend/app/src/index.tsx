@@ -9,7 +9,7 @@ import "./index.css";
 import {Header} from './Components/Header/Header'
 import App from "./App";
 import SignIn from "./Features/SignIn/SignIn";
-import SignUp from "./Features/SignUp/SignUp";
+import SignUpPage from "./Pages/SignUpPage";
 import NotFound from "./Components/NotFound/NotFound";
 
 const rootElement = document.getElementById("root");
@@ -21,7 +21,7 @@ if (rootElement) {
     <Header />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
