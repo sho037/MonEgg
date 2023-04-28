@@ -13,8 +13,6 @@ const Location = () => {
 
     return (
         <>
-            <Typography variant="h5">Location</Typography>
-            <hr />
             <FormControl fullWidth>
                 <InputLabel id="locationSelect">Location</InputLabel>
                 <Select
