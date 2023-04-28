@@ -17,7 +17,7 @@ export const Header = () => {
         <Typography variant="h4" component="div">
           Logpose
         </Typography>
-        <Button color="inherit">SignUp</Button>
+        <Button color="inherit" sx={{ml:"auto"}}>SignUp</Button>
       </Toolbar>
     </AppBar>
   );
