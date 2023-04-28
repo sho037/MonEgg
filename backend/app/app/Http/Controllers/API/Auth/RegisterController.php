@@ -22,12 +22,15 @@ class RegisterController extends Controller
             // 'password_confirmation => 'required'
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password'])
         ]);
 
-        return response()->json(Response::HTTP_CREATED);
+        return response()->json(
+            $user,
+            Response::HTTP_CREATED
+        );
     }
 }
