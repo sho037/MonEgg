@@ -22,6 +22,13 @@ Route::prefix('/post')->name('post.')->controller(\App\Http\Controllers\API\Post
     });
 });
 
+Route::prefix('/postLike')->name('postLike.')->controller(\App\Http\Controllers\API\PostLikeController::class)->group(function () {
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/store', 'store')->name('store');
+        Route::post('/destroy', 'destroy')->name('destroy');
+    });
+});
+
 Route::prefix('/spot')->name('spot.')->controller(\App\Http\Controllers\API\SpotController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 });
