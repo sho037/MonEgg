@@ -39,9 +39,16 @@ const countPosts = (posts: PostsEntity): number => {
 };
 
 export const Posts = () => {
+    /*
+        各都道府県に割り当てられたIDを指定する 
+        指定されたIDの都道府県に関する投稿を取得する
+        以下の「1」は開発用．
+    */
+    const spotId = 1;
+
     const [posts, setPosts] = React.useState<PostsEntity>([]);
     const [postsToggleOpen, setPostsToggleOpen] = React.useState<boolean[]>([]);
-    React.useEffect(() => { getPost(1, setPosts); }, []);
+    React.useEffect(() => { getPost(spotId, setPosts); }, []);
     React.useEffect(() => { setPostsToggleOpen(new Array<boolean>(countPosts(posts)).fill(false)); }, [countPosts(posts)]);
 
     const callProcessPosts = (posts: PostsEntity, index: number): any => {
