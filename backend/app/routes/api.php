@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/register', '\App\Http\Controllers\API\Auth\RegisterController@register')->name('register');
-Route::post('/login', '\App\Http\Controllers\API\Auth\LoginController@login')->name('login');
-Route::post('/logout', '\App\Http\Controllers\API\Auth\LogoutController@logout')->name('logout');
-
 Route::prefix('/post')->name('post.')->controller(\App\Http\Controllers\API\PostController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 
@@ -26,10 +22,17 @@ Route::prefix('/post')->name('post.')->controller(\App\Http\Controllers\API\Post
     });
 });
 
+Route::prefix('/postLike')->name('postLike.')->controller(\App\Http\Controllers\API\PostLikeController::class)->group(function () {
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/store', 'store')->name('store');
+        Route::post('/destroy', 'destroy')->name('destroy');
+    });
+});
+
 Route::prefix('/spot')->name('spot.')->controller(\App\Http\Controllers\API\SpotController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return new \App\Http\Resources\API\User\RegisterUserResource($request->user());
+    return $request->user();
 });
