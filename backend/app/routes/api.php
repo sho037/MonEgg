@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/register', '\App\Http\Controllers\API\Auth\RegisterController@register')->name('register');
-Route::post('/login', '\App\Http\Controllers\API\Auth\LoginController@login')->name('login');
-Route::post('/logout', '\App\Http\Controllers\API\Auth\LogoutController@logout')->name('logout');
-
 Route::prefix('/post')->name('post.')->controller(\App\Http\Controllers\API\PostController::class)->group(function () {
     Route::get('/', 'index')->name('index');
 
