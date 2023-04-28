@@ -6,8 +6,30 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-const ButtonForUser = () => {
-  axios
+const ButtonForUser = (): JSX.Element => {
+  const Axios = axios.create({
+    baseURL: "http://localhost:8000/",
+    withCredentials: true,
+    headers: {
+      "Content-type": "Application/json",
+      Accept: "application/json",
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  });
+
+  const api = axios.create({
+    baseURL: "http://localhost:8000/api",
+    withCredentials: true,
+    headers: {
+      "Content-type": "Application/json",
+      Accept: "application/json",
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  });
+
+  Axios.get("/sanctum/csrf-cookie");
+
+  api
     .get("http://localhost:8000/api/user/", {
       headers: {
         "Content-type": "Application/json",
@@ -21,7 +43,7 @@ const ButtonForUser = () => {
     .catch((err) => {
       return (
         <Button color="inherit" href="/signup" sx={{ ml: "auto" }}>
-          SignUp
+          Signip
         </Button>
       );
     });
