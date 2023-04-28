@@ -44,7 +44,7 @@ export const Posts = () => {
         指定されたIDの都道府県に関する投稿を取得する
         以下の「1」は開発用．
     */
-    const spotId = 1;
+    const spotId = Number(localStorage.getItem("userLocationCode"));
 
     const [posts, setPosts] = React.useState<PostsEntity>([]);
     const [postsToggleOpen, setPostsToggleOpen] = React.useState<boolean[]>([]);
