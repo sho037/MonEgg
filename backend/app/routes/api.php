@@ -27,5 +27,5 @@ Route::prefix('/spot')->name('spot.')->controller(\App\Http\Controllers\API\Spot
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return new \App\Http\Resources\API\User\RegisterUserResource($request->user());
+    return $request->user();
 });
