@@ -27,8 +27,6 @@ const user = async () => {
     .get("/user")
     .then((res) => {
       console.log(res.data);
-      console.log(res.data.data);
-      console.log(res.data.data.name);
       userId = res.data.id;
     })
     .catch((error) => {
